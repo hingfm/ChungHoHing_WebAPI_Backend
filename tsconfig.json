@@ -61,6 +61,7 @@
 	},
 	"exclude": [
 		"node_modules",
-		".build"
+		".build",
+		"custom-types.d.ts"
 	]
 }

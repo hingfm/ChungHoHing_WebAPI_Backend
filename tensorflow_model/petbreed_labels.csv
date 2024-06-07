@@ -1,0 +1,128 @@
+id,label,cat_or_dog
+0,Abyssinian,1
+1,Afghan,0
+2,African Wild Dog,0
+3,Airedale,0
+4,American Bobtail,1
+5,American Curl,1
+6,American Hairless,0
+7,American Shorthair,1
+8,American Spaniel,0
+9,Applehead Siamese,1
+10,Balinese,1
+11,Basenji,0
+12,Basset,0
+13,Beagle,0
+14,Bearded Collie,0
+15,Bengal,1
+16,Bermaise,0
+17,Bichon Frise,0
+18,Birman,1
+19,Blenheim,0
+20,Bloodhound,0
+21,Bluetick,0
+22,Bombay,1
+23,Border Collie,0
+24,Borzoi,0
+25,Boston Terrier,0
+26,Boxer,0
+27,British Shorthair,1
+28,Bull Mastiff,0
+29,Bull Terrier,0
+30,Bulldog,0
+31,Burmese,1
+32,Cairn,0
+33,Calico,1
+34,Chartreux,1
+35,Chihuahua,0
+36,Chinese Crested,0
+37,Chow,0
+38,Clumber,0
+39,Cockapoo,0
+40,Cocker,0
+41,Collie,0
+42,Corgi,0
+43,Cornish Rex,1
+44,Coyote,0
+45,Dalmation,0
+46,Devon Rex,1
+47,Dhole,0
+48,Dilute Calico,1
+49,Dilute Tortoiseshell,1
+50,Dingo,0
+51,Doberman,0
+52,Domestic Long Hair,1
+53,Domestic Medium Hair,1
+54,Domestic Short Hair,1
+55,Egyptian Mau,1
+56,Elk Hound,0
+57,Exotic Shorthair,1
+58,Extra-Toes Cat - Hemingway Polydactyl,1
+59,French Bulldog,0
+60,German Sheperd,0
+61,Golden Retriever,0
+62,Great Dane,0
+63,Great Perenees,0
+64,Greyhound,0
+65,Groenendael,0
+66,Havana,1
+67,Himalayan,1
+68,Irish Spaniel,0
+69,Irish Wolfhound,0
+70,Japanese Bobtail,1
+71,Japanese Spaniel,0
+72,Komondor,0
+73,Labradoodle,0
+74,Labrador,0
+75,Lhasa,0
+76,Maine Coon,1
+77,Malinois,0
+78,Maltese,0
+79,Manx,1
+80,Mex Hairless,0
+81,Munchkin,1
+82,Nebelung,1
+83,Newfoundland,0
+84,Norwegian Forest Cat,1
+85,Ocicat,1
+86,Oriental Short Hair,1
+87,Oriental Tabby,1
+88,Pekinese,0
+89,Persian,1
+90,Pit Bull,0
+91,Pixiebob,1
+92,Pomeranian,0
+93,Poodle,0
+94,Pug,0
+95,Ragamuffin,1
+96,Ragdoll,1
+97,Rhodesian,0
+98,Rottweiler,0
+99,Russian Blue,1
+100,Saint Bernard,0
+101,Schnauzer,0
+102,Scotch Terrier,0
+103,Scottish Fold,1
+104,Selkirk Rex,1
+105,Shar Pei,0
+106,Shiba Inu,0
+107,Shih-Tzu,0
+108,Siamese,1
+109,Siberian,1
+110,Siberian Husky,0
+111,Silver,1
+112,Singapura,1
+113,Snowshoe,1
+114,Somali,1
+115,Sphynx - Hairless Cat,1
+116,Tabby,1
+117,Tiger,1
+118,Tonkinese,1
+119,Torbie,1
+120,Tortoiseshell,1
+121,Turkish Angora,1
+122,Turkish Van,1
+123,Tuxedo,1
+124,Vizsla,0
+125,York Chocolate,1
+126,Yorkie,0
