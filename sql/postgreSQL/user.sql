@@ -9,7 +9,8 @@ CREATE TABLE public.users (
 	passwordsalt varchar(16) NULL,
 	email varchar(64) NOT NULL,
 	avatarurl varchar(64) NULL,
-  role text, 
+  	role text, 
+	region text,
 	CONSTRAINT users_email_key UNIQUE (email),
 	CONSTRAINT users_pkey PRIMARY KEY (id),
 	CONSTRAINT users_username_key UNIQUE (username)
@@ -17,9 +18,9 @@ CREATE TABLE public.users (
 
 
 
-INSERT INTO users (username, email, password, role) VALUES
-	('alice', 'alice@example.com', '123456', 'admin'),
-	('bob', 'bob@example.com','123456', 'user'),
-	('colin', 'colin@example.com','123456', 'user'),
-	('cycheng', 'cycheng@example.com','654321', 'admin');
+INSERT INTO users (username, email, password, role, region) VALUES
+	('alice', 'alice@example.com', '123456', 'admin', 'Mong Kok'),
+	('bob', 'bob@example.com','123456', 'user', 'Sha Tin'),
+	('colin', 'colin@example.com','123456', 'user', 'Chai Wan'),
+	('cycheng', 'cycheng@example.com','654321', 'admin', 'Sha Tin');
   
