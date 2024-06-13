@@ -9,6 +9,8 @@ import { router as articles } from "./routes/articles";
 import { router as special } from './routes/special';
 import { router as uploads } from './routes/uploads';
 import { router as users } from "./routes/users";
+import { router as regions } from './routes/regions'
+import { router as kinds } from './routes/kinds'
 import serve from 'koa-static';
 
 const app: Koa = new Koa();
@@ -33,6 +35,8 @@ app.use(articles.middleware());
 app.use(special.middleware());
 app.use(uploads.middleware());
 app.use(users.middleware());
+app.use(regions.middleware())
+app.use(kinds.middleware())
 
 app.use(async (ctx: RouterContext, next: any) => {
   try {
