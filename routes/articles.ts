@@ -26,6 +26,7 @@ interface Post {
   imageurl: string;
   authorid: number;
   description: string;
+  region: string;
   links: {
     likes: string;
     fav: string;
@@ -56,6 +57,7 @@ const getAll = async (ctx: RouterContext, next: any) => {
         imageurl = "",
         authorid = 0,
         description = "",
+        region = "",
       }: Partial<Post> = post;
       const links = {
         likes: `http://${ctx.host}/api/v1/articles/${post.id}/likes`,
@@ -71,6 +73,7 @@ const getAll = async (ctx: RouterContext, next: any) => {
         imageurl,
         authorid,
         description,
+        region,
         links,
       }; // Utilizing the destructured elements
     });
@@ -79,6 +82,50 @@ const getAll = async (ctx: RouterContext, next: any) => {
     await next();
   }
 };
+
+interface FilterQuerier {
+  keywords?: string
+  region?: string
+}
+
+const getFiltered = async (ctx: RouterContext, next: any) => {
+  const querier = ctx.request.body as FilterQuerier
+  const result = await model.getFiltered({...querier})
+  if (result.length) {
+    const body: Post[] = result.map((post: any) => {
+      const {
+        id = 0,
+        title = "",
+        alltext = "",
+        summary = "",
+        imageurl = "",
+        authorid = 0,
+        description = "",
+        region = "",
+      }: Partial<Post> = post;
+      const links = {
+        likes: `http://${ctx.host}/api/v1/articles/${post.id}/likes`,
+        fav: `http://${ctx.host}/api/v1/articles/${post.id}/fav`,
+        msg: `http://${ctx.host}/api/v1/articles/${post.id}/msg`,
+        self: `http://${ctx.host}/api/v1/articles/${post.id}`,
+      };
+      return {
+        id,
+        title,
+        alltext,
+        summary,
+        imageurl,
+        authorid,
+        description,
+        region,
+        links,
+      }; // Utilizing the destructured elements
+    });
+    ctx.body = body;
+    await next();
+  }
+}
+
 const createArticle = async (ctx: RouterContext, next: any) => {
   /*let c: any = ctx.request.body;
   let title = c.title;
@@ -297,6 +344,7 @@ router.get("/stat", async (ctx: RouterContext, next) => {
 })
 
 router.get("/", getAll);
+router.post("/filter", getFiltered)
 router.post("/", basicAuth, bodyParser(), validateArticle, createArticle);
 router.get("/:id([0-9]{1,})", getById);
 router.put(
