@@ -39,43 +39,6 @@ export const getByUserId = async  (id:number) =>{
   }
 }
 
-export const findOrCreateGoogleUser = async (
-  googleId: string,
-  email: string,
-  name: string
-) => {
-  console.log(`Attempting to find or create Google user: ${email}`);
-  let query = "SELECT * FROM users WHERE google_id = ?";
-  let users = await db.run_query(query, [googleId]);
-  console.log(`User lookup result: ${users.length} found`);
-
-  if (users.length === 0) {
-    console.log(`No user found with Google ID ${googleId}, creating new user.`);
-    let newUser = {
-      google_id: googleId,
-      email: email,
-      username: name, // Assuming using email as the username
-      role: 'user',
-      dateregistered: new Date(),
-    };
-
-    let keys = Object.keys(newUser).join(',');
-    let values = Object.values(newUser);
-    let placeholders = values.map(() => '?').join(',');
-    query = `INSERT INTO users (${keys}) VALUES (${placeholders})`;
-    try {
-      const result = await db.run_query(query, values);
-      console.log("New user created successfully");
-      return newUser;
-    } catch (error) {
-      console.error("Failed to create new user:", error);
-      return undefined;
-    }
-  }
-  console.log("User found, no need to create a new one.");
-  return users[0];
-};
-
 export const findByUsername = async (username: string) => {
   const query = 'SELECT * FROM users where username = ?';
   const user = await db.run_query(query,  [username] );
