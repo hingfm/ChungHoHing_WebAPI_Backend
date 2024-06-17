@@ -20,8 +20,8 @@ const app: Koa = new Koa();
 const router: Router = new Router();
 
 // Configure Passport to use Google OAuth 2.0
-const GOOGLE_CLIENT_ID = "866324759131-u9v5vrrjukgkegaj8r8iqhajc8lc3m2v.apps.googleusercontent.com";
-const GOOGLE_CLIENT_SECRET = "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";
+const GOOGLE_CLIENT_ID = "";
+const GOOGLE_CLIENT_SECRET = "";
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 
 passport.use(new GoogleStrategy({
