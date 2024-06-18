@@ -174,6 +174,9 @@ paths:
                  role:
                    type: string
                    description: The user role.  
+                 region:
+                   type: string
+                   description: The user region.                    
                  links:
                    type: uri
                    description: The  link to user info by id.

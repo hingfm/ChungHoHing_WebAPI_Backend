@@ -27,6 +27,10 @@
           "description": "role of user",
           "type": "string"
         },
+        "region": {
+          "description": "region of user",
+          "type": "string"
+        }
 
       },
       "required": ["username", "password"]

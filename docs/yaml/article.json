@@ -35,7 +35,15 @@
         "description": {
           "description": "description of articles in more details",
           "type": "string"  
-        }        
+        },
+        "region": {
+          "description": "Region of article post",
+          "type": "string"  
+        }, 
+        "kinds": {
+          "description": "Dog breed of the article",
+          "type": "string"  
+        }               
       },
       "required": ["title", "alltext", "authorid"]
     }
